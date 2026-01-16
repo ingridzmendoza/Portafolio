@@ -11,21 +11,6 @@ body {
     background-color: rgba(67, 188, 203, 0.05);
 }
 
-/*
-.header {
-    position: relative;
-    min-height: 40vh;
-    padding: 4rem 1rem;
-    background: linear-gradient(135deg, #316c74, #2b6f78);
-    color: #fff;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-    */
-
 .header {
     position: relative;
     min-height: 40vh;
@@ -55,7 +40,6 @@ body {
             #F5FCFC);
 }
 
-
 .header h1,
 .header p {
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
@@ -70,8 +54,6 @@ body {
 .header p {
     font-size: 1.25rem;
 }
-
-
 
 .section {
     padding: 2rem 1rem;
