@@ -11,10 +11,12 @@ body {
     background-color: rgba(67, 188, 203, 0.05);
 }
 
+
 .header {
     position: relative;
     min-height: clamp(35vh, 45vh, 60vh);
     padding: clamp(2.5rem, 6vw, 4rem) 1rem;
+    padding-bottom: clamp(4rem, 10vw, 6rem);
     background: linear-gradient(135deg, #316c74, #2b6f78);
     color: #fff;
     text-align: center;
@@ -23,7 +25,39 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+.header h1,
+.header p {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.header h1 {
+    font-size: clamp(2rem, 6vw, 3.1rem);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+}
+
+.profile-photo-wrapper {
+    position: static;
+    transform: none;
+    margin-top: 1.5rem;
+}
+
+.profile-photo {
+    width: min(160px, 50vw);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 5px solid #ffffff;
+    background-color: #fff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .header::after {
@@ -33,30 +67,14 @@ body {
     right: 0;
     bottom: 0;
     height: clamp(160px, 30vh, 400px);
-
     background: linear-gradient(
         to bottom,
         rgba(31, 41, 51, 0),
         #F5FCFC
     );
-
     pointer-events: none;
 }
 
-.header h1,
-.header p {
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-}
-
-.header h1 {
-    font-size: 3.1rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.header p {
-    font-size: 1.25rem;
-}
 
 .section {
     padding: 2rem 1rem;
@@ -84,9 +102,16 @@ body {
     box-shadow: 0 4px 12px rgba(67, 188, 203, 0.15);
 }
 
+
 .about {
     margin-top: 20px;
+    background-color: rgba(67, 188, 203, 0.12);
+    border-left: 4px solid #43BCCB;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 12px;
 }
+
 
 button {
     margin-top: 1rem;
@@ -107,6 +132,7 @@ button:hover {
     display: none;
 }
 
+
 .footer {
     text-align: center;
     padding: 1rem;
@@ -114,24 +140,6 @@ button:hover {
     font-size: 0.9rem;
 }
 
-@media (min-width: 768px) {
-    main {
-        max-width: 1000px;
-        margin: auto;
-    }
-
-    .experience-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-    }
-
-    .projects {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-}
 
 .custom-link {
     color: #2fa6b5 !important;
@@ -142,6 +150,7 @@ button:hover {
 .custom-link:hover {
     color: #43BCCB !important;
 }
+
 
 .accordion {
     display: flex;
@@ -188,17 +197,6 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-.about {
-    background-color: rgba(67, 188, 203, 0.12);
-    border-left: 4px solid #43BCCB;
-    padding: 1rem 1.5rem;
-    border-radius: 6px;
-    margin-bottom: 12px;
-}
-
-.contact h2 {
-    color: #1f2933;
-}
 
 .project-images {
     margin-top: 1rem;
@@ -213,6 +211,10 @@ button:hover {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.contact h2 {
+    color: #1f2933;
 }
 
 .contact-list {
@@ -232,22 +234,35 @@ button:hover {
     font-size: 1.1rem;
 }
 
-.profile-photo-wrapper {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-}
 
-.profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 80%;
-    object-fit: cover;
+@media (min-width: 768px) {
+    main {
+        max-width: 1000px;
+        margin: auto;
+    }
 
-    border: 5px solid #ffffff;
-    background-color: #fff;
+    .experience-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
 
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .profile-photo-wrapper {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0;
+        z-index: 5;
+    }
+
+    .profile-photo {
+        width: 200px;
+    }
 }
