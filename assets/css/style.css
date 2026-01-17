@@ -13,8 +13,8 @@ body {
 
 .header {
     position: relative;
-    min-height: 40vh;
-    padding: 4rem 1rem;
+    min-height: clamp(35vh, 45vh, 60vh);
+    padding: clamp(2.5rem, 6vw, 4rem) 1rem;
     background: linear-gradient(135deg, #316c74, #2b6f78);
     color: #fff;
     text-align: center;
@@ -22,10 +22,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
-    overflow: visible;
 }
-
 
 .header::after {
     content: "";
@@ -33,11 +32,15 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 400px;
+    height: clamp(160px, 30vh, 400px);
 
-    background: linear-gradient(to bottom,
-            rgba(31, 41, 51, 0),
-            #F5FCFC);
+    background: linear-gradient(
+        to bottom,
+        rgba(31, 41, 51, 0),
+        #F5FCFC
+    );
+
+    pointer-events: none;
 }
 
 .header h1,
