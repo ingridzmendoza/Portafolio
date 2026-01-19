@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Portafolio web de Ingrid Z. Mendoza Dórame, estudiante de Ingeniería en Sistemas de Información.">
     <title>Portafolio | Ingrid M.</title>
+
     <link rel="icon" href="./assets/imgs/Favicon.png">
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="..." crossorigin="anonymous" />
 </head>
+
 
 <body>
 
@@ -17,7 +22,7 @@
         <p>Estudiante de Ingeniería en Sistemas de Información (8° semestre)</p>
 
         <div class="profile-photo-wrapper">
-            <img src="assets/imgs/Cat.jpg" alt="Perfil" class="profile-photo" />
+            <img src="assets/imgs/Cat.jpg" alt="Foto de Perfil" class="profile-photo" />
         </div>
     </header>
 
@@ -41,18 +46,19 @@
 
             <div class="accordion">
 
-                <button class="accordion-header">
+                <button class="accordion-header" aria-expanded="false" aria-controls="exp-academica">
                     Experiencia Académica
                     <span class="accordion-icon">+</span>
                 </button>
 
-                <div class="accordion-content">
+                <div class="accordion-content" id="exp-academica" role="region" aria-labelledby="btn-exp-academica">
+
                     <article class="card">
                         <h4>NutriApp – Prácticas de Desarrollo I</h4>
                         <p>
                             Desarrollo de una aplicación de escritorio para el manejo de programas
                             de alimentación y ejercicio de una nutrióloga. Fui la encargada del
-                            equipo de diseño. Utilicé <strong>Drawi.io</strong>
+                            equipo de diseño. Utilicé <strong>Draw.io</strong>
                             para elaborar mockups de la interfaz y modelé los diagramas de secuencia,
                             colaboración y entidad relación para el mapeo de datos y base de datos.
                         </p>
@@ -82,9 +88,7 @@
                         <h4>Smart City Hackathon - Ayuntamiento de Hermosillo</h4>
                         <p>
                             En Marzo de 2025, tuve la oportunidad de representar a la Universidad de Sonora
-                            en el Hackathon organizado para la ciudad de Hermosillo. Aprendí mucho acerca del
-                            trabajo en equipo y acerca de la colaboración para llegar a soluciones inteligentes
-                            y sustentables.
+                            en el Hackathon organizado para la ciudad de Hermosillo.
                         </p>
                         <div class="project-images">
                             <img src="assets/imgs/Hackathon1.jpeg" alt="Hackathon – 2024">
@@ -93,12 +97,13 @@
                     </article>
                 </div>
 
-                <button class="accordion-header">
+                <button class="accordion-header" aria-expanded="false" aria-controls="exp-profesional">
                     Experiencia Profesional
                     <span class="accordion-icon">+</span>
                 </button>
 
-                <div class="accordion-content">
+                <div class="accordion-content" id="exp-profesional" role="region" aria-labelledby="btn-exp-profesional">
+
                     <article class="card">
                         <h4>Call Center – Legal Conversion Center</h4>
                         <p>
@@ -113,16 +118,11 @@
                         <p>
                             Desde abril de 2024 formo parte del equipo de desarrollo, donde me
                             encargué principalmente de la documentación técnica de la plataforma
-                            <a href="https://mylegal.cc" class="custom-link" target="_blank">myLegal</a>,
-                            incluyendo mapeo de datos, documentación de código y APIs. Mi labor fue levantar la página
-                            de
-                            <a href="https://help.mylegal.cc" class="custom-link" target="_blank">Knowledge Base</a>
-                            (por medio
-                            de <strong>Wiki.js</strong>) para alojar toda la documentación.
+                            <a href="https://mylegal.cc" class="custom-link" target="_blank">myLegal</a>.
                         </p>
                         <div class="project-images">
-                            <img src="assets/imgs/KnowledgeBase1.png" alt="Hackathon – 2024">
-                            <img src="assets/imgs/KnowledgeBase2.jpeg" alt="Hackathon – 2024">
+                            <img src="assets/imgs/KnowledgeBase1.png" alt="myLegal Knowledge Base - Login">
+                            <img src="assets/imgs/KnowledgeBase2.jpeg" alt="myLegal Knowledge Base - Home Page">
                         </div>
                     </article>
 
@@ -131,15 +131,12 @@
                         <p>
                             Actualmente trabajo como asistente del SCRUM Master,
                             coordinando equipos de operaciones, desarrollo y diseño.
-                            Realizo labores de testeo de APIs, revisión de código, pruebas
-                            unitarias y seguimiento del Jira board. Esta semana estoy a cargo
-                            de revisar las actualizaciones de mockups mobile en Figma y
-                            proporcionar feedback al equipo de diseño.
                         </p>
                     </article>
                 </div>
 
             </div>
+
         </section>
 
         <section class="section fun-facts">
