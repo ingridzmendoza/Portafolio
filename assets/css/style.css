@@ -78,6 +78,7 @@ body {
 
 .section {
     padding: 2rem 1rem;
+    scroll-margin-top: 120px;
 }
 
 .section h2 {
@@ -264,5 +265,46 @@ button:hover {
 
     .profile-photo {
         width: 200px;
+    }
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem auto 3rem;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    background: #ffffff;
+    color: #2b6f78;
+    border: none;
+    padding: 0.75rem 1.6rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.tab-button:hover {
+    background-color: rgba(43, 111, 120, 0.15);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, #2fa6b5, #2b6f78);
+    color: #ffffff;
+    box-shadow: 0 14px 32px rgba(43, 111, 120, 0.45);
+}
+
+@media (max-width: 480px) {
+    .tab-button {
+        width: 100%;
+        text-align: center;
     }
 }

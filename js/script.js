@@ -1,3 +1,23 @@
+const tabButtons = document.querySelectorAll('.tab-button')
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const sectionId = button.dataset.section
+        const section = document.getElementById(sectionId)
+
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        }
+
+        tabButtons.forEach(btn => btn.classList.remove('active'))
+        button.classList.add('active')
+    })
+})
+
+
 const accordionHeaders = document.querySelectorAll(".accordion-header");
 
 accordionHeaders.forEach(header => {
