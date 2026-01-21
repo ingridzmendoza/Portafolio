@@ -47,3 +47,10 @@ accordionHeaders.forEach(header => {
 });
 
 
+const servicesBtn = document.getElementById("services-btn");
+
+if (servicesBtn) {
+    servicesBtn.addEventListener("click", () => {
+        window.location.href = "services.html";
+    });
+}

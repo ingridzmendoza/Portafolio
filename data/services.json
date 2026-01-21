@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Documentación técnica",
+        "description": "Documentación funcional y técnica para sistemas web.",
+        "price": 50,
+        "image": "assets/imgs/services/doc.png"
+    },
+    {
+        "id": 2,
+        "name": "Diseño de mockups UI/UX",
+        "description": "Diseño de interfaces en Figma o Draw.io.",
+        "price": 100,
+        "image": "assets/imgs/services/figma.png"
+    },
+    {
+        "id": 3,
+        "name": "Coordinación de proyectos",
+        "description": "Apoyo en planificación y seguimiento de proyectos.",
+        "price": 150,
+        "image": "assets/imgs/services/project.png"
+    },
+    {
+        "id": 4,
+        "name": "Desarrollo web frontend básico",
+        "description": "Implementación de interfaces responsivas con HTML, CSS y JavaScript.",
+        "price": 100,
+        "image": "assets/imgs/services/frontend.png"
+    },
+    {
+        "id": 5,
+        "name": "Análisis y modelado de sistemas",
+        "description": "Diagramas UML, entidad–relación y documentación de procesos.",
+        "price": 200,
+        "image": "assets/imgs/services/analysis.png"
+    },
+    {
+        "id": 6,
+        "name": "Experiencia de usuario (UX)",
+        "description": "Evaluación de usabilidad y mejoras en experiencia del usuario.",
+        "price": 50,
+        "image": "assets/imgs/services/ux.png"
+    }
+]

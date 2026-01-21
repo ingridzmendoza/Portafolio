@@ -42,6 +42,15 @@ body {
     font-size: clamp(1rem, 3.5vw, 1.25rem);
 }
 
+.header-compact {
+    min-height: clamp(18vh, 22vh, 28vh);
+    padding: clamp(1.5rem, 4vw, 2.5rem) 1rem;
+    padding-bottom: clamp(2rem, 4vw, 3rem);
+    background: linear-gradient(135deg, #005b65, #2c666d);
+    color: #fff;
+}
+
+
 .profile-photo-wrapper {
     position: static;
     transform: none;
@@ -67,11 +76,9 @@ body {
     right: 0;
     bottom: 0;
     height: clamp(160px, 30vh, 400px);
-    background: linear-gradient(
-        to bottom,
-        rgba(31, 41, 51, 0),
-        #F5FCFC
-    );
+    background: linear-gradient(to bottom,
+            rgba(31, 41, 51, 0),
+            #F5FCFC);
     pointer-events: none;
 }
 
@@ -214,9 +221,6 @@ button:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.contact h2 {
-    color: #1f2933;
-}
 
 .contact-list {
     margin-top: 15px;
@@ -307,4 +311,325 @@ button:hover {
         width: 100%;
         text-align: center;
     }
+}
+
+.services-page {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.service-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.service-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-desc {
+    font-size: 0.9rem;
+    color: #555;
+    flex-grow: 1;
+}
+
+.service-price {
+    font-weight: bold;
+    margin: 0.75rem 0;
+}
+
+.service-btn {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    background: #316c74;
+    color: #fff;
+    cursor: pointer;
+}
+
+.service-btn:hover {
+    background: #255a61;
+}
+
+.cart {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    max-width: 390px;
+}
+
+.cart h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item span {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.remove-btn {
+    background: #4bbac6;
+    color: #fff;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.remove-btn:hover {
+    background: #3aa6b2;
+}
+
+#cart-total {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-align: right;
+    margin: 1.2rem 0;
+    color: #111;
+}
+
+#checkout-btn {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #4bbac6;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#checkout-btn:hover {
+    background: #3aa6b2;
+}
+
+@media (max-width: 1100px) {
+    .services-page {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cart {
+        position: static;
+        order: 2;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-img {
+        height: 180px;
+    }
+}
+
+.custom-alert {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: #8bd2da;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 7px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    z-index: 1000;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.custom-alert i {
+    font-size: 1.1rem;
+}
+
+.custom-alert.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.custom-alert.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+#back-btn {
+    align-self: flex-start;
+    width: fit-content;
+    max-width: max-content;
+    white-space: nowrap;
+}
+
+
+#back-btn:hover {
+    color: #ffffff;
+    background-color: #2FA6B5;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+body.dark {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark .header,
+body.dark .header-compact {
+    background: linear-gradient(135deg, #0e4f62, #3ea3c1);
+}
+
+body.dark .section,
+body.dark .about,
+body.dark .footer {
+    background-color: #111827;
+}
+
+body.dark .card,
+body.dark .service-card,
+body.dark .cart {
+    background-color: #1e293b;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+body.dark p,
+body.dark li,
+body.dark span {
+    color: #e5e7eb;
+}
+
+body.dark .tab-button:hover,
+body.dark-mode .tab-button:hover {
+    background-color: rgba(255, 255, 255, 0.159);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+
+body.dark .service-desc {
+    color: #9ca3af;
+}
+
+body.dark .accordion-header {
+    background-color: #1e293b;
+    color: #e5e7eb;
+    border-color: #334155;
+}
+
+body.dark .tab-button {
+    background-color: #1e293b;
+    color: #e5e7eb;
+}
+
+body.dark .tab-button.active {
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    color: #fff;
+}
+
+body.dark .custom-link {
+    color: #3990a6 !important;
+}
+body.dark .custom-link:hover {
+    color: #7ac3d5 !important;
+}
+
+body.dark .custom-alert {
+    background: #428c93;
+}
+
+body.dark #cart-total {
+    color: #f9fafb;
+}
+
+body.dark .service-btn {
+    background: #0ea5e9;
+}
+
+body.dark .service-btn:hover {
+    background: #38bdf8;
+}
+
+body.dark .cart-item {
+    border-bottom: 1px solid #334155;
+}
+
+body.dark .remove-btn {
+    background: #0ea5e9;
+}
+
+body.dark .remove-btn:hover {
+    background: #38bdf8;
 }

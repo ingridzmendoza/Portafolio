@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Servicios | Ingrid M.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="header header-compact">
+        <button class="tab-button" id="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <button id="theme-toggle" class="theme-toggle">
+        <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <h1>Servicios</h1>
+        <p>Tutorías y asesorías personalizadas en los siguientes temas. Aparta tu lugar. </p>
+    </header>
+
+    <main class="services-page">
+
+        <section class="services-catalog">
+            <div id="services-container" class="services-grid"></div>
+        </section>
+
+        <aside class="cart">
+            <h2>Carrito</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: $0</p>
+            <button id="checkout-btn">Finalizar Compra</button>
+        </aside>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Ingrid Z. Mendoza</p>
+    </footer>
+
+    <div id="custom-alert" class="custom-alert">
+        <i id="alert-icon" class="fa-solid fa-circle-check"></i>
+        <p id="alert-message"></p>
+    </div>
+
+
+    <script src="js/services.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>
